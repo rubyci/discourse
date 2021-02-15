@@ -15,6 +15,7 @@ describe User do
 
       describe 'when username already exists' do
         it 'should not be valid' do
+          sleep
           new_user = Fabricate.build(:user, username: user.username.upcase)
 
           expect(new_user).to_not be_valid
